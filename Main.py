@@ -98,13 +98,13 @@ def get_hitlocations(ship):
     hull = components['hull'][-1]
     for _name in HULL_COMPONENTS:
         for comp_name, comp in get_component(ship[hull], _name):
-            hit_locations[comp_name] = HitLocation(comp['maxHP'], comp['rndPartHP'])
+            hit_locations[str(comp_name)] = HitLocation(comp['maxHP'], comp['rndPartHP'])
 
     return hit_locations
 
 
-SHIP_NAME = 'PFSD110_Kleber'
-ENTITY_ID = 811267
+SHIP_NAME = 'PGSD610_Z_42'
+ENTITY_ID = 840469
 
 def main():
     filename = 'Ship\\{}.json'.format(SHIP_NAME)
